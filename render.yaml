@@ -24,7 +24,7 @@ services:
         value: 3000
       # This will automatically point to your backend
       - key: NEXT_PUBLIC_API_URL
-        value: https://storylabs-api.onrender.com
+        value: https://storybooks-api.onrender.com
 
     dependsOn:
       - storylabs-api
