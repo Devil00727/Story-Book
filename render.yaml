@@ -1,7 +1,7 @@
 services:
   # Backend Service
   - type: web
-    name: storylabs-api
+    name: storybook-api
     env: docker
     dockerfilePath: ./backend/Dockerfile
     envVars:
@@ -16,7 +16,7 @@ services:
 
   # Frontend Service
   - type: web
-    name: storylabs
+    name: storybook
     env: docker
     dockerfilePath: ./frontend/Dockerfile
     envVars:
@@ -24,7 +24,7 @@ services:
         value: 3000
       # This will automatically point to your backend
       - key: NEXT_PUBLIC_API_URL
-        value: https://storybooks-api.onrender.com
+        value: https://storybook-api.onrender.com
 
     dependsOn:
-      - storylabs-api
+      - storybook-api
